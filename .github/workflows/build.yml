@@ -17,7 +17,9 @@ jobs:
 
       - name: Compile project
         run: |
-          for /r src %i in (*.java) do javac -d . "%i"
+          Get-ChildItem -Recurse -Filter *.java | ForEach-Object {
+            javac -d . $_.FullName
+          }
 
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@v6
