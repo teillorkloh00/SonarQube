@@ -16,7 +16,8 @@ jobs:
           java-version: '17'
 
       - name: Compile project
-        run: javac -d . src/*.java
+        run: |
+          for /r src %i in (*.java) do javac -d . "%i"
 
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@v6
