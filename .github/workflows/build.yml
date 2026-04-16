@@ -16,8 +16,7 @@ jobs:
           java-version: '17'
 
       - name: Compile project
-        run: javac -d . BancoApp.java
-
+        run: javac -d . src/BancoApp.java
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@v6
         with:
