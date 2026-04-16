@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class BancoApp {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in):
         ArrayList<Conta> contas = new ArrayList<>();
 
         int opcao;
